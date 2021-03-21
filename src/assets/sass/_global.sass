@@ -1,0 +1,37 @@
+@import '@app/assets/sass/functions'
+@import '@app/assets/sass/variables'
+@import '@app/assets/sass/animations'
+
+.btn
+    color: $black
+    background-color: $primary
+    font-size: 1.25rem
+    display: inline-block
+    font-weight: 400
+    line-height: 1.5
+    text-align: center
+    text-decoration: none
+    vertical-align: middle
+    cursor: pointer
+    user-select: none
+    border: 1px solid transparent
+    padding: .5rem 3em
+    border-radius: .3rem
+    transition: .15s
+    border-color: $primary
+    cursor: pointer
+    &:active
+        background-color: tint-color($primary, 10%)
+        border-color: tint-color($primary, 10%)
+    &:hover
+        background-color: shade-color($primary, 15%)
+        border-color: shade-color($primary, 15%)
+    &:focus
+        box-shadow: 0 0 0 0.25rem shade-color($primary, 5%)
+        &:not(:focus-visible)
+            outline: 0
+    &:disabled
+        background-color: tint-color($primary, 30%)
+        border-color: tint-color($primary, 30%)
+        color: shade-color($black, 15%)
+        cursor: not-allowed

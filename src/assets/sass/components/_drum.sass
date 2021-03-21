@@ -1,0 +1,49 @@
+@import '@app/assets/sass/functions'
+@import '@app/assets/sass/variables'
+@import '@app/assets/sass/mixins'
+
+.drum
+    margin-bottom: auto
+    border-radius: 50%
+    overflow: hidden
+    &-box
+        min-height: 100vh
+        display: flex
+        flex-direction: column
+    &__wheel
+        width: 100%
+        transition: transform 1s .2s
+        &-text
+            font-size: 3rem
+            transform-box: fill-box
+            transform-origin: center
+            @media (max-width: 480px)
+                font-size: 4rem
+    &__segment
+        stroke: $black
+        stroke-width: 1
+        &.bg-1
+            fill: $gray-100
+        &.bg-2
+            fill: $gray-200
+        &.bg-3
+            fill: $gray-300
+        &.bg-4
+            fill: $gray-400
+        &.bg-5
+            fill: $gray-500
+        &.bg-6
+            fill: $gray-600
+    &__btn
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            left: 50%
+            bottom: calc(100% + 30px)
+            transform: translateX(-50%)
+            +triangle('top', $primary, 30px, 30px)
+        &-box
+            display: flex
+            justify-content: center
+            margin: 3rem 0 2rem

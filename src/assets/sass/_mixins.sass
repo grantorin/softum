@@ -1,0 +1,49 @@
+@mixin triangle($direction:top, $color:#000, $size-x:100px, $size-y:50px)
+    @if $direction == 'top'
+        border-color: transparent transparent $color
+        border-style: solid
+        border-width: 0 $size-x $size-x
+        height: 0
+        width: 0
+    @if $direction == 'bottom'
+        border-color: $color transparent transparent transparent
+        border-style: solid
+        border-width: $size-x / 2
+        height: 0
+        width: 0
+    @if $direction == 'left'
+        border-color: transparent $color transparent transparent
+        border-style: solid
+        border-width: $size-x $size-x $size-x 0
+        height: 0
+        width: 0
+    @if $direction == 'right'
+        border-color: transparent transparent transparent $color
+        border-style: solid
+        border-width: $size-x 0 $size-x $size-x
+        height: 0
+        width: 0
+    @if $direction == 'bottom-right'
+        border-color: transparent transparent $color transparent
+        border-style: solid
+        border-width: 0 0 $size-x $size-x
+        height: 0
+        width: 0
+    @if $direction == 'bottom-left'
+        border-color: transparent transparent transparent $color
+        border-style: solid
+        border-width: $size-x 0 0 $size-x
+        height: 0
+        width: 0
+    @if $direction == 'top-left'
+        border-color: $color transparent transparent transparent
+        border-style: solid
+        border-width: $size-x $size-x 0 0
+        height: 0
+        width: 0
+    @if $direction == 'top-right'
+        border-color: transparent $color transparent transparent
+        border-style: solid
+        border-width: 0 $size-x $size-x 0
+        height: 0
+        width: 0

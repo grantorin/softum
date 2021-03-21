@@ -1,0 +1,13 @@
+.animate
+    &__animated
+        animation-delay: .1s
+        animation-duration: .3s
+        animation-fill-mode: both
+    &__fadeInDown
+        animation-name: fadeInDown
+
+@keyframes fadeInDown
+    from
+        transform: translate3d(0, -100%, 0)
+    to
+        transform: translate3d(0, 0, 0)
